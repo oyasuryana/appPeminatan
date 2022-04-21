@@ -50,4 +50,15 @@ class Mpeminatan extends Model
         ];
         return $this->peminatan->where($syarat)->paginate(2);
     }
+
+    public function listTahunPeminatan(){
+        $this->peminatan  =NEW Mpeminatan;
+        $this->peminatan->distinct();
+        $this->peminatan->select('year(tgl_daftar) as tahun');
+        return $this->peminatan->find();
+    }
+
+    public function rekapPeminatan(){
+        
+    }
 }
