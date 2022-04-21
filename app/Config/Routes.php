@@ -49,6 +49,8 @@ $routes->get('/dashboard', 'Admindashboard::index',['filter'=>'otentifikasi']);
 
 $routes->get('/data-peminatan', 'Peminatan::index',['filter'=>'otentifikasi']);
 
+$routes->get('/rekapitulasi-peminatan', 'Laporan::index',['filter'=>'otentifikasi']);
+$routes->post('/rekapitulasi-peminatan', 'Laporan::index',['filter'=>'otentifikasi']);
 
 
 
