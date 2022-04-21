@@ -12,7 +12,7 @@
                 <th>Tempat,Tanggal Lahir</th>
                 <th>L/P</th>
                 <th>Asal Sekolah</th>
-                <;;klkkdxxPilihan 1</th>
+                <th>Pilihan 1</th>
                 <th>Pilihan 2</th>
             </tr>
         </thead>
