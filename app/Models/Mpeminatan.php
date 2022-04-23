@@ -58,7 +58,19 @@ class Mpeminatan extends Model
         return $this->peminatan->find();
     }
 
-    public function rekapPeminatan(){
-        
+    public function rekapPeminatanPilihan1($thn_penerimaan){
+        $this->peminatan  =NEW Mpeminatan;
+        $this->peminatan->select('tbl_peminatan.pilihan_1, count(tbl_peminatan.nisn) as jml');
+        $this->peminatan->where('year(tgl_daftar)',$thn_penerimaan);
+        $this->peminatan->groupBy('tbl_peminatan.pilihan_1');
+        return $this->peminatan->find();
+    }
+
+    public function rekapPeminatanPilihan2($thn_penerimaan){
+        $this->peminatan  =NEW Mpeminatan;
+        $this->peminatan->select('tbl_peminatan.pilihan_2, count(tbl_peminatan.nisn) as jml');
+        $this->peminatan->where('year(tgl_daftar)',$thn_penerimaan);
+        $this->peminatan->groupBy('tbl_peminatan.pilihan_2');
+        return $this->peminatan->find();
     }
 }
